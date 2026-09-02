@@ -1,0 +1,102 @@
+name: "🐛 Bug Report"
+description: File a bug report or defect observed in RUS PDF Editor
+title: "[Bug]: "
+labels: ["needs-triage", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report an issue with RUS PDF!
+        Please fill in the details below to help us diagnose and resolve the problem quickly.
+
+  - type: input
+    id: version
+    attributes:
+      label: RUS PDF Version
+      description: What version of RUS PDF are you running? (Found in Help -> About or bottom status bar)
+      placeholder: "e.g. 0.4.7"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What OS are you using?
+      options:
+        - "macOS (Apple Silicon - M1/M2/M3/M4)"
+        - "macOS (Intel x64)"
+        - "Windows 11"
+        - "Windows 10"
+        - "Linux (Ubuntu / Debian)"
+        - "Linux (Fedora / RHEL / Arch)"
+        - "Other (please specify in description)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected Component Area
+      description: Which part of the application is affected?
+      options:
+        - "area:pdf-editor (Canvas, page manipulation, text editing)"
+        - "area:annotations (Drawings, highlights, stamps, shapes)"
+        - "area:ocr (Text recognition, OCR language models)"
+        - "area:digital-signature (Signing, certificate verification, LTV)"
+        - "area:export-import (Batch convert, TXT export, saving/opening)"
+        - "area:license (Activation dialog, license renewal, offline mode)"
+        - "area:ui-ux (Layout, localization/i18n, dark/light theme, shortcuts)"
+        - "Other / Unsure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "Explain what went wrong..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the problem.
+      placeholder: |
+        1. Open a PDF document containing...
+        2. Click on the '...' tool
+        3. Attempt to...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen instead?
+      placeholder: "The document should export cleanly with all text intact..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Messages / Console Logs
+      description: If available, paste any error messages or DevTools console logs (press Cmd+Option+I / Ctrl+Shift+I -> Console).
+      render: shell
+      placeholder: "Paste console error logs or stack trace here..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments & Sample Files
+      description: Please attach screenshots, screen recordings (drag & drop into the box), or a non-confidential sample PDF file demonstrating the issue.
+      placeholder: "Drag and drop images, PDFs, or log files here..."
+    validations:
+      required: false
