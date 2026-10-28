@@ -9,6 +9,13 @@ This repository does **not** contain application source code. It is the official
 
 ---
 
+## 💻 Download & Install
+
+- **Website:** <https://rus-pdf.scigrad.com>
+- **Windows (winget):** `winget install RusFere.rus-pdf` (once accepted into the community repository)
+- **Windows / macOS:** direct installers are available on the website.
+
+---
 ## 📌 Filing an Issue
 
 To help us diagnose and fix issues quickly:
@@ -45,3 +52,11 @@ Issues submitted here go through an automated and maintainer-driven triage proce
 ## 🔒 Security & Privacy
 
 If your bug involves sensitive documents or confidential data, please redact personal information before uploading sample PDFs or logs.
+
+---
+
+## 📄 License
+
+RUS PDF Editor is released under the [MIT License](LICENSE).
+
+Copyright © 2026 RusFere Tech Co., Ltd.
